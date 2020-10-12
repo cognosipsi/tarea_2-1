@@ -1,0 +1,96 @@
+id,nombre,tipos,pc,ps,sexo,evolucion previa,evolucion posterior,numero pokedex,region
+96,Pikachu,Electrico,570,90,Macho,Pichu,Raichu,22,Kanto
+97,Melmetal,Acero,3208,207,Hembra,Meltan,No tiene,809,Galar
+98,Moltres,"Fuego, Volador",1800,113,Macho,No tiene,No tiene,146,Kanto
+99,Charmander,Fuego,2500,250,Macho,No tiene,Charmeleon,4,Kanto
+100,Morpeko,"Electrico, Siniestro",2400,230,Macho,No tiene,No tiene,877,Galar
+101,Lugia,"Volador, Psiquico",3500,250,Macho,No tiene,No tiene,249,Johto
+102,Mewtwo,Psiquico,3890,380,No tiene,No tiene,No tiene,150,Kanto
+103,Rhyperior,"Tierra, Roca",3652,207,Hembra,Rhydon,No tiene,464,Sinnoh
+104,Tyranitar,"Roca, Siniestro",3471,179,Hembra,Pupitar,No tiene,248,Johto
+105,Mamoswine,"Hielo, Tierra",3245,201,Macho,Piloswine,No tiene,473,Sinnoh
+106,Mewtwo,Psiquico,3191,157,No tiene,No tiene,No tiene,150,Kanto
+107,Rhydon,"Tierra, Roca",3088,193,Hembra,Rhyhorn,Rhyperior,112,Kanto
+108,Heracross,"Lucha, Bicho",3033,160,Macho,No tiene,No tiene,214,Johto
+109,Milotic,Agua,2962,181,Hembra,Feebas,No tiene,350,Hoenn
+110,Charizard,"Fuego, Volador",2804,157,Hembra,Charmeleon,No tiene,6,Kanto
+111,Ho-Oh,"Fuego, Volador",2802,153,No tiene,No tiene,No tiene,250,Johto
+112,Hariyama,Lucha,2748,246,Hembra,Makuhita,No tiene,297,Hoenn
+113,Raboot,Fuego,2500,272,Macho,Scorbunny,Cinderace,814,Galar
+114,Typhlosion,Fuego,3000,200,Macho,Quilava,No tiene,157,Johto
+115,Dragonite,"Volador, Dragon",3328,167,Macho,Dragonair,No tiene,149,Kanto
+116,Inferneape ,"Fuego, Lucha",2189,300,Macho,Monferno,No tiene,392,Sinnoh
+117,Golisopod,"Agua, Bicho",2500,135,Macho,Wimpod,No tiene,768,Alola
+118,Metagross,"Psiquico, Acero",3326,151,No tiene,Metang,No tiene,376,Hoenn
+119,Togedemaru,"Electrico, Acero",1500,80,Macho,No tiene,No tiene,777,Alola
+120,Gyarados,"Agua, Volador",3048,173,Macho,Magikarp,No tiene,130,Kanto
+121,Articuno,"Hielo, Volador",1713,131,No tiene,No tiene,No tiene,144,Kanto
+122,Mawile,"Acero, Hada",1400,90,Hembra,No tiene,No tiene,303,Hoenn
+123,Charmander,Fuego,520,300,Hembra,No tiene,Charmeleon,4,Kanto
+124,Arcanine,Fuego,1300,207,Macho,Growlithe,No tiene,59,Kanto
+125,Dedenne ,"Electrico, Hada",200,67,Macho,No tiene,No tiene,702,Kalos
+126,Heracross ,"Lucha, Bicho",3104,364,Macho,No tiene,No tiene,211,Johto
+127,Ferrothorn,"Planta, Acero",3000,299,Macho,Ferroseed,No tiene,598,Teselia
+128,Eevee,Normal,459,146,Hembra,No tiene,Flareon,133,Kanto
+129,Quagsire,"Agua, Tierra",1877,162,Macho,Wooper,No tiene,195,Johto
+130,Terrakion,"Lucha, Roca",2573,146,No tiene,No tiene,No tiene,639,Kalos
+131,Roserade,"Planta, Veneno",2549,120,Macho,Roselia,No tiene,407,Sinnoh
+132,Feraligatr,Agua,2500,157,Macho,Croconaw,No tiene,160,Johto
+133,Terrakion,"Lucha, Roca",2657,148,No tiene,No tiene,No tiene,639,Teselia
+134,Patrat,Normal,434,83,Macho,No tiene,Watchog,504,Teselia
+135,Patrat,Normal,430,83,Macho,No tiene,Watchog,504,Teselia
+136,Snivy,Planta,30,21,Macho,No tiene,Servine,495,Teselia
+137,Oshawott,Agua,580,95,Hembra,No tiene,Dewott,501,Teselia
+138,Nidoran,Veneno,120,50,Hembra,No tiene,Nidorina,29,Kanto
+139,Oshawott,Agua,575,96,Macho,No tiene,Dewott,501,Teselia
+140,Dunsparce,Normal,482,103,Hembra,No tiene,No tiene,206,Johto
+141,Snivy,Planta,469,84,Macho,No tiene,Servine,495,Teselia
+142,Hoppip,"Planta, Volador",366,82,Hembra,No tiene,Skiploom,187,Johto
+143,Darkrai,Siniestro,2113,109,No tiene,No tiene,No tiene,491,Sinnoh
+144,Darkrai,Siniestro,2093,108,No tiene,No tiene,No tiene,491,Sinnoh
+145,Drowzee,Psiquico,692,110,Macho,No tiene,Hypno,96,Kanto
+146,Tepig,Fuego,596,102,Macho,No tiene,Pignite,498,Teselia
+147,Ekans,Veneno,308,55,Macho,No tiene,Arbok,23,Kanto
+148,Darkrai,Siniestro,2064,109,No tiene,No tiene,No tiene,491,Sinnoh
+149,Snorunt,Hielo,368,78,Macho,No tiene,Glalie,361,Hoenn
+150,Gible,"Tierra, Dragon",627,97,Macho,No tiene,Gabite,443,Sinnoh
+151,Gible,"Tierra, Dragon",600,97,Hembra,No tiene,Gabite,443,Sinnoh
+152,Lunatone,"Psiquico, Roca",552,87,No tiene,No tiene,No tiene,337,Hoenn
+153,Carvanha,"Agua, Siniestro",694,87,Hembra,No tiene,Sharpedo,318,Hoenn
+154,Weedle,"Veneno, Bicho",177,67,Macho,No tiene,Kakuna,13,Kanto
+155,Weedle,"Veneno, Bicho",344,92,Hembra,No tiene,Kakuna,13,Kanto
+156,Chatot,"Normal, Volador",1008,118,Hembra,No tiene,No tiene,441,Sinnoh
+157,Chatot,"Normal, Volador",988,118,Hembra,No tiene,No tiene,441,Sinnoh
+158,Mankey,Lucha,613,76,Hembra,No tiene,Primeape,56,Kanto
+159,Chatot,"Normal, Volador",423,97,Macho,No tiene,No tiene,441,Sinnoh
+160,Magikarp,Agua,145,59,Hembra,No tiene,Gyarados,129,Kanto
+161,Pikachu,Electrico,11,10,Hembra,Pichu,Raichu,25,Kanto
+162,Shelgon,Dragon,1147,105,Macho,Bagon,Salamence,372,Hoenn
+163,Solrock,"Psiquico, Roca",1330,132,No tiene,No tiene,No tiene,338,Hoenn
+164,Xatu,"Volador, Psiquico",921,92,Macho,Natu,No tiene,178,Johto
+165,Clamperl,Agua,523,63,Hembra,No tiene,Huntail,366,Hoenn
+166,Cyndaquil,Fuego,520,77,Macho,No tiene,Quilava,155,Johto
+167,Gastly,"Veneno, Fantasma",504,59,Hembra,No tiene,Haunter,92,Kanto
+168,Aegislash,"Fantasma, Acero",0,324,Macho,Double,No tiene,681,Kalos
+169,Vaporeon,Agua,2551,210,Macho,Eevee,No tiene,134,Kanto
+170,Vulpix,Fuego,642,92,Hembra,No tiene,Ninetales,37,Kanto
+171,Charmander,Fuego,680,86,Macho,No tiene,Charmeleon,4,Kanto
+172,Dusclops,Fantasma,674,68,Macho,Duskull,Dusknoir,356,Hoenn
+173,Meowth,Normal,119,42,Macho,No tiene,Persian,52,Kanto
+174,Pikachu,Electrico,191,42,Macho,Pichu,Raichu,25,Kanto
+175,Abra,Psiquico,939,73,Macho,No tiene,Kadabra,63,Kanto
+176,Feebas,Agua,150,57,Hembra,No tiene,Milotic,349,Hoenn
+177,Joltik,"Electrico, Bicho",658,96,Macho,No tiene,Galvantula,595,Teselia
+178,Feebas,Agua,146,59,Macho,No tiene,Milotic,349,Hoenn
+179,Maractus,Planta,1262,117,Macho,No tiene,No tiene,556,Teselia
+180,Claydol,"Tierra, Psiquico",1352,111,No tiene,Baltoy,No tiene,344,Hoenn
+181,Primeape,Lucha,1735,123,Macho,Mankey,No tiene,57,Kanto
+182,Claydol,"Tierra, Psiquico",839,87,No tiene,Baltoy,No tiene,344,Hoenn
+183,Solosis,Psiquico,752,83,Macho,No tiene,Duosion,577,Teselia
+184,Slowpoke,"Agua, Psiquico",677,132,Macho,No tiene,Slowbro,79,Kanto
+185,Vibrava,"Tierra, Dragon",236,52,Hembra,Trapinch,Flygon,329,Hoenn
+186,Shellos,Agua,543,107,Hembra,No tiene,Gastrodon,422,Sinnoh
+187,Trapinch,Tierra,824,89,Macho,No tiene,Vibrava,328,Hoenn
+188,Trapinch,Tierra,527,72,Hembra,No tiene,Vibrava,328,Hoenn
+189,Cherrim,Planta,1646,131,Hembra,Cherubi,No tiene,421,Sinnoh
+190,Burmy,Bicho,275,80,Macho,No tiene,Mothim,412,Sinnoh
