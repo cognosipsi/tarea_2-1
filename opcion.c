@@ -78,7 +78,6 @@ void opcion_1(HashMap *MapaNombre, HashMap *MapaNombreDex, HashMap *MapaTipo,Tre
     int i;
     int j;
     int l;
-    int k=0;
     char region[40];
     int a;
     pokemon *info;
@@ -87,8 +86,6 @@ void opcion_1(HashMap *MapaNombre, HashMap *MapaNombreDex, HashMap *MapaTipo,Tre
     char *tmp;
     List *ListaNombre;
     fgets (linea, 1023, fp);
-    int o;
-    scanf("%d", &o);
     while (fgets (linea, 1023, fp) != NULL) {
         info=(pokemon*)malloc(sizeof(pokemon));
         infodex=(pokemon_dex*)malloc(sizeof(pokemon_dex));
@@ -285,14 +282,18 @@ void opcion_2(HashMap *MapaNombre, HashMap *MapaNombreDex, HashMap *MapaTipo,Tre
     char posterior[40];
     int numero;
     char region[40];
-    List *ListaNombre;
+    List *L;
     pokemon_dex *comprobardex;
     pokemon *pkm = (pokemon *) malloc(sizeof(pokemon));
     pokemon_dex *dex = (pokemon_dex *) malloc(sizeof(pokemon_dex));
 
+    identificacion++;
+    pkm->id=identificacion;
+
     printf("Ingrese nombre\n");
     scanf("%s", nombre);
     strcpy(pkm->nombre, nombre);
+    strcpy(dex->nombre, nombre);
 
     printf("Ingrese cantidad de tipos\n");
     scanf("%d", &n);
@@ -313,14 +314,6 @@ void opcion_2(HashMap *MapaNombre, HashMap *MapaNombreDex, HashMap *MapaTipo,Tre
     printf("Ingrese PS\n");
     scanf("%d", &PS);
     pkm->ps = PS;
-    if (searchTreeMap(ArbolPs, &pkm->ps) == NULL) {
-        ListaNombre = create_list();
-        push_back(ListaNombre, pkm);
-        insertTreeMap(ArbolPs, &pkm->ps, ListaNombre);
-    }
-    else {
-        push_back(searchTreeMap(ArbolPs, &pkm->ps), pkm);
-    }
 
     printf("Ingrese sexo\n");
     scanf("%s", sexo);
@@ -342,39 +335,28 @@ void opcion_2(HashMap *MapaNombre, HashMap *MapaNombreDex, HashMap *MapaTipo,Tre
     scanf("%s", region);
     strcpy(dex->region, region);
     
-    identificacion++;
-    pkm->id=identificacion;
     if (searchMap(MapaNombre, nombre) == NULL) {
-        List *L = create_list();
+        L = create_list();
         push_back(L, pkm);
-        insertMap(MapaNombre,pkm->nombre, L);
+        insertMap(MapaNombre, pkm->nombre, L);
     }
     else {
         push_back(searchMap(MapaNombre,pkm->nombre), pkm);
     }
-    
-    if (searchMap(MapaNombre,pkm->nombre) == NULL) {
-        ListaNombre = create_list();
-        push_back(ListaNombre, pkm);
-        insertMap(MapaNombre, pkm->nombre, ListaNombre);
-    }
-    else {
-        push_back(searchMap(MapaNombre, pkm->nombre), pkm);
-    }
 
     if (searchMap(MapaTipo, dex->tipos[0]) == NULL) {
-        ListaNombre = create_list();
-        push_back(ListaNombre, pkm);
-        insertMap(MapaTipo, dex->tipos[0], ListaNombre);  
+        L = create_list();
+        push_back(L, pkm);
+        insertMap(MapaTipo, dex->tipos[0], L);  
     }
     else {
         push_back(searchMap(MapaTipo, dex->tipos[0]), pkm);
     }
 
     if (searchMap(MapaTipo, dex->tipos[1]) == NULL) {
-        ListaNombre = create_list();
-        push_back(ListaNombre, pkm);
-        insertMap(MapaTipo, dex->tipos[1], ListaNombre);  
+        L = create_list();
+        push_back(L, pkm);
+        insertMap(MapaTipo, dex->tipos[1], L);  
     }
     else {
         push_back(searchMap(MapaTipo, dex->tipos[1]), pkm);
@@ -384,28 +366,28 @@ void opcion_2(HashMap *MapaNombre, HashMap *MapaNombreDex, HashMap *MapaTipo,Tre
     comprobardex = searchMap(MapaNombreDex, dex->nombre);
     if (comprobardex == NULL) {
         insertMap(MapaNombreDex, dex->nombre, dex);
+        dex->almacenados = 1;
     }
     else {
         comprobardex->almacenados++;
     }
 
     if (searchTreeMap(ArbolPc, &pkm->pc) == NULL) {
-        ListaNombre = create_list();
-        push_back(ListaNombre, pkm);
-        insertTreeMap(ArbolPc, &pkm->pc, ListaNombre);
+        L = create_list();
+        push_back(L, pkm);
+        insertTreeMap(ArbolPc, &pkm->pc, L);
     }
     else {
         push_back(searchTreeMap(ArbolPc, &pkm->pc), pkm);
     }
 
-    
-    if (searchMap(MapaNombre, pkm->nombre) == NULL) {
-      ListaNombre = create_list();
-      push_back(ListaNombre, pkm);
-      insertMap(MapaNombre, pkm->nombre, ListaNombre);
+    if (searchTreeMap(ArbolPs, &pkm->ps) == NULL) {
+        L = create_list();
+        push_back(L, pkm);
+        insertTreeMap(ArbolPs, &pkm->ps, L);
     }
     else {
-      push_back(searchMap(MapaNombre, pkm->nombre), pkm);
+        push_back(searchTreeMap(ArbolPs, &pkm->ps), pkm);
     }
     
     dex = firstMap(MapaNombreDex);//ATENCION
@@ -417,42 +399,13 @@ void opcion_2(HashMap *MapaNombre, HashMap *MapaNombreDex, HashMap *MapaTipo,Tre
     dex = firstMap(MapaNombreDex);
     while(dex != NULL) {
       if (searchMap(MapaRegion, dex->region) == NULL) {
-        ListaNombre = create_list();
-        push_back(ListaNombre, dex);
-        insertMap(MapaRegion, dex->region, ListaNombre);
+        L = create_list();
+        push_back(L, dex);
+        insertMap(MapaRegion, dex->region, L);
       }else {
         push_back(searchMap(MapaRegion, dex->region), dex);
       }
       dex = nextMap(MapaNombreDex);
-    }
-
-    ListaNombre = firstMap(MapaNombre);
-    pokemon *iterador;
-    while (ListaNombre != NULL) {
-      first(ListaNombre);
-      iterador = (pokemon*)malloc(sizeof(pokemon));
-      iterador = first(ListaNombre);
-      while (iterador != NULL) {
-        iterador = next(ListaNombre);
-      }
-      ListaNombre = nextMap(MapaNombre);
-    }
-
-    ListaNombre = firstMap(MapaTipo);
-    while (ListaNombre != NULL) {
-      first(ListaNombre);
-      iterador = (pokemon*)malloc(sizeof(pokemon));
-      iterador = first(ListaNombre);
-      while (iterador != NULL) {
-        iterador = next(ListaNombre);
-      }
-      ListaNombre = nextMap(MapaTipo);
-    }
-
-    pokemon_dex *iterador2 = (pokemon_dex*)malloc(sizeof(pokemon_dex));
-    iterador2 = firstMap(MapaNombreDex);
-    while (iterador2!=NULL) {
-        iterador2 = nextMap(MapaNombreDex);
     }
 }
 
@@ -578,7 +531,8 @@ void opcion_8(TreeMap *ArbolPs) {
   }
 }
 void opcion_9 (HashMap *MapaNombre,HashMap *MapaNombreDex, HashMap *MapaTipo,TreeMap *ArbolDex, TreeMap *ArbolPs, TreeMap *ArbolPc, int id){
-    List *L;
+    /*List *L;
+    int comprobar=0;
     L=firstMap(MapaNombre);
     pokemon *iterador;
     while(L!=NULL) {
@@ -586,12 +540,21 @@ void opcion_9 (HashMap *MapaNombre,HashMap *MapaNombreDex, HashMap *MapaTipo,Tre
       iterador = first(L);
       while (iterador != NULL) {
         if(iterador->id==id) {
-          
+          comprobar=1;
+          pop_current(L);
+          if(size(L)==0){
+            eraseMap(MapaNombre,iterador->nombre);
+          }
         }
         iterador = next(L);
       }
       L=nextMap(MapaNombre);
-    }  
+    }
+    if(comprobar==1) {
+
+    }else {
+      printf("Ese id no se encuentra");
+    }*/  
 }
 
 void opcion_10(HashMap *MapaRegion){

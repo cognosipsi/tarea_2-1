@@ -1,0 +1,1 @@
+gcc -g main.c hashmap-answer.c list.c opcion.c treemap.c -o tarea_2-1
